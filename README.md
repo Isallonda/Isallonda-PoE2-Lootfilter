@@ -2,7 +2,7 @@
 # Loot Filter - for Path of Exile 2
 #======================================================================================================================================================
 
-##### Welcome to Isallonda's Lootfilter! #####
+Welcome to Isallonda's Lootfilter!
 
 # This filter is designed for general mapping. You can change or delete any special categories you don’t need. 
 # The "special shows" are set for my Deadeye build with Dualstring Bow and Visceral Quiver, plus valuable white items like Headhunter or Atramentis.
