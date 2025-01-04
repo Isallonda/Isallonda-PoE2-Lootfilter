@@ -27,7 +27,12 @@
 
 # Thanks for using my filter!  May your loot be plentiful, your map runs smooth, and your adventures full of sparkles. Stay sane Exiles! <3
 
-# May your loot be plentiful, your map runs smooth, and your Exile adventures full of sparkles. Stay sane (and loot crazy)! <3
+
+# My lootfilters on Reddit
+# https://www.reddit.com/r/PathOfExile2/comments/1hqe1h2/my_lootfilter_for_mapping_unclutter_your_screen/
+
+# Github
+# https://github.com/Isallonda/Isallonda-PoE2-Lootfilter/releases
 
 #======================================================================================================================================================
 
@@ -40,7 +45,7 @@
 
 Show
 Class "Rings" "Amulets" "Belts"
-BaseType  "Stellar" "Heavy" "Gold" "Prismatic" "Amethyst" "Sapphire" "Solar" "Breach"
+BaseType  "Stellar" "Heavy" "Breach" "Sapphire Ring"
 SetBorderColor 0 240 190 170
 Rarity = Normal
 SetTextColor 255 255 255 200
@@ -50,7 +55,7 @@ PlayEffect Pink
 
 #Crafting Base for your build - Ranger
 
-#Put everything in here what you like to be special highlighted with an Purple beam (color can be changed -> just change the name at playeffect)
+#Put everything in here what you like to be special highlighted with an Purple beam (color can be changed -> just change the color at playeffect)
 
 Show
 Class "Bow"
@@ -69,6 +74,29 @@ PlayEffect Purple
 #---------------------------------
 # Uniques and High Valuable Currency
 #---------------------------------
+
+Show
+Rarity Unique
+BaseType == "Ring"
+Sockets > 0
+SetTextColor 175 96 37 255
+SetBorderColor 175 96 37 255
+SetBackgroundColor 53 13 13 255
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 1 Brown Star
+SetFontSize 40
+
+Show
+Rarity Unique
+BaseType == "Armoured Cap" "Emerald" "Furtive Wraps" "Incense Relic" "Ornate Belt" "Ring" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Time-Lost Diamond" "Timeless Jewel" "Ultimate Life Flask" "Ultimate Mana Flask" "Utility Belt" "Vase Relic"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
 
 Show
 Rarity Unique
@@ -206,14 +234,6 @@ SetBorderColor 20 240 240
 SetFontSize 40
 
 
-Show
-BaseType "Uncut Skill Gem"
-SetTextColor 20 240 240
-SetBorderColor 20 240 240
-PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
-SetFontSize 40
 
 #---------------------------------
 # Socketables and Special Equipment
@@ -261,7 +281,7 @@ PlayEffect Green
 # Special A Tier - Rare Jewels
 Show
 Class "Jewel"
-Rarity <= Rare
+Rarity = Rare
 SetTextColor 0 240 190
 SetBorderColor 0 240 190
 SetFontSize 40
@@ -270,6 +290,13 @@ PlayEffect Cyan
 PlayAlertSound 2 300
 
 # Special B Tier - Any Runes and Charms - All are hidden (besides iron runes), when you want them to show change Hide into Show
+Show
+Class "Jewel"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 36
+PlayEffect Cyan
+PlayAlertSound 2 300
 
 Show
 BaseType "Iron Rune" 
@@ -388,7 +415,14 @@ PlayEffect Yellow
 
 Show
 Class "Currency"
-BaseType "Catalyst" "Flesh" "Carapace" "Adaptive" "Xoph's" "Tul's" "Esh's" "Uul-Netol's" "Reaver" "Sibilant" "Chayula's" "Skittering" "Neural"
+BaseType "Catalyst" "Adaptive" "Tul's" "Sibilant" "Skittering" "Neural" "Esh's" "Reaver" "Chayula's" "Skittering" "Neural"
+SetFontSize 30
+SetTextColor 128 0 128 255
+SetBackgroundColor 227 158 44 210
+
+Hide
+Class "Currency"
+BaseType "Catalyst" "Flesh" "Carapace" "Uul-Netol's"  "Sibilant"  "Xoph's" 
 SetFontSize 30
 SetTextColor 128 0 128 255
 SetBackgroundColor 227 158 44 210
@@ -443,7 +477,6 @@ Show
 Class "Currency"
 BaseType "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Chance Shard"
 SetTextColor 220 190 132
-MinimapIcon 2 Grey Circle
 SetFontSize 35
 
 Hide
@@ -506,8 +539,8 @@ SetFontSize 40
 SetTextColor 255 207 255
 SetBorderColor 255 207 255
 SetBackgroundColor 65 20 80
-PlayAlertSound 1 300
 PlayEffect Purple Temp
+SetFontSize 40
 MinimapIcon 1 Orange UpsideDownHouse
 
 Show
@@ -597,13 +630,14 @@ MinimapIcon 1 White Square
 SetFontSize 36
 
 #---------------------------------
-# Value Rares
+# Valueable Items
 #---------------------------------
 
 Show
 Class "Rings" "Amulets" "Belts"
-BaseType  "Stellar" "Heavy" "Gold" "Prismatic" "Amethyst" "Sapphire" "Solar" "Breach"
+BaseType  "Stellar" "Gold" "Prismatic" "Amethyst" "Ruby Ring" "Sapphire Ring" "Topaz Ring" "Solar" "Breach"
 Rarity Rare
+SetFontSize 40
 SetTextColor 233 206 75
 SetBorderColor 233 206 75
 PlayEffect Purple
@@ -614,6 +648,42 @@ Rarity Rare
 SetFontSize 40
 SetTextColor 233 206 75
 SetBorderColor 233 206 75
+
+Show
+BaseType = "Attuned Wand" 
+ItemLevel = 82
+Rarity = Normal
+SetFontSize 40
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35
+PlayAlertSound 1 300
+PlayEffect Orange
+MinimapIcon 1 Orange Star
+
+Show
+BaseType = "Attuned Wand" 
+ItemLevel = 83
+Rarity = Normal
+SetFontSize 40
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35
+PlayAlertSound 1 300
+PlayEffect Orange
+MinimapIcon 1 Orange Star
+
+Show
+BaseType = "Attuned Wand" 
+ItemLevel = 84
+Rarity = Normal
+SetFontSize 40
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35
+PlayAlertSound 1 300
+PlayEffect Orange
+MinimapIcon 1 Orange Star
 
 #---------------------------------
 # Rings, Amulets, Belts
@@ -634,7 +704,7 @@ SetFontSize 36
 
 Show
 Class "Rings" "Amulets" "Belts"
-BaseType "Ruby Ring" "Sapphire Ring" "Topaz Ring" "Prismatic"
+BaseType "Ruby Ring" "Sapphire Ring" "Topaz Ring" "Prismatic" "Bloodstone"
 Rarity Normal
 SetFontSize 38
 PlayEffect Blue
@@ -714,6 +784,18 @@ SetBackgroundColor 0 0 0 170
 #---------------------------------
 
 Hide
+Rarity = Magic
+Class "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows" "Body Armours" 
+
+Hide
+Rarity = Magic
+Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
+
+Hide
+Rarity = Magic
+Class "Quivers"
+
+Hide
 Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Bow" "Crossbow" "QuarterStaff"
 Rarity = normal
 SetTextColor 255 255 119 225
@@ -722,6 +804,10 @@ SetBackgroundColor 0 0 0 170
 Hide
 Rarity <= Magic
 Class "Flasks" 
+
+
+
+
 
 
 
